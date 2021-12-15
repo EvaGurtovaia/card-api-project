@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Card from "./Card";
 const baseApiUrl = "https://deckofcardsapi.com/api/deck";
 
 class Deck extends Component {
@@ -38,9 +39,13 @@ class Deck extends Component {
         }
     }
     render() {
+        let cards = this.state.drawn.map((card) => (
+            <Card name={card.name} image={card.image} key={card.id} />
+        ));
         return (
             <div>
                 <h1>Card Dealer</h1>
+                {cards}
                 <button onClick={this.getCard}>Get card!</button>
             </div>
         );
