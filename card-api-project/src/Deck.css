@@ -1,3 +1,13 @@
-.DeckArea {
+.Deck {
+    font-family: "Slabo 27px", serif;
+}
+.CardArea {
     margin-top: 80px;
+}
+
+.Deck-title {
+    color: azure;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
